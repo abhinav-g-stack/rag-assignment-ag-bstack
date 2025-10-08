@@ -11,7 +11,7 @@ class EmbeddingService {
     this.genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     this.model = process.env.EMBEDDING_MODEL || 'text-embedding-004';
     this.dimensions = 768; // Gemini embedding dimensions
-    this.batchSize = 50; // Process in smaller batches
+    this.batchSize = 100; // Process in smaller batches
   }
 
   async generateEmbedding(text) {

@@ -45,7 +45,7 @@ class DocumentIngestor {
         }
       }
 
-      console.log('\n✓ Ingestion complete!');
+      console.log('\nIngestion complete!');
       console.log(`Total chunks: ${total_chunks}`);
       console.log(`Total embeddings: ${embeddings.length}`);
       

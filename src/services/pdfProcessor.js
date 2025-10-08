@@ -13,8 +13,8 @@ class PDFProcessor {
       const dataBuffer = await fs.readFile(filePath);
       const data = await pdf(dataBuffer);
       
-      console.log(`✓ Extracted ${data.numpages} pages from PDF`);
-      console.log(`✓ Total text length: ${data.text.length} characters`);
+      console.log(`Extracted ${data.numpages} pages from PDF`);
+      console.log(`Total text length: ${data.text.length} characters`);
       
       return data.text;
     } catch (error) {
@@ -72,7 +72,7 @@ class PDFProcessor {
       });
     }
 
-    console.log(`✓ Created ${chunks.length} semantic chunks`);
+    console.log(`Created ${chunks.length} semantic chunks`);
     return chunks;
   }
 

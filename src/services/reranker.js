@@ -12,7 +12,7 @@ class Reranker {
       });
       this.model = 'rerank-english-v3.0';
     } else {
-      console.warn('⚠ No COHERE_API_KEY found. Reranking will use similarity scores only.');
+      console.warn('No COHERE_API_KEY found. Reranking will use similarity scores only.');
     }
   }
 
@@ -20,7 +20,7 @@ class Reranker {
     console.log(`[3/3] Reranking ${chunks.length} chunks...`);
 
     if (!this.useCohere) {
-      console.log('⚠ Using similarity-based reranking (no Cohere API key)');
+      console.log('Using similarity-based reranking (no Cohere API key)');
       return this.rerankBySimilarity(query, chunks);
     }
 

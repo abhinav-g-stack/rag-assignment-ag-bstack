@@ -9,8 +9,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>📚 RAG Document Q&A System</h1>
-            <p class="subtitle">Ask questions about your document</p>
+            <h1>RAG Document Q&A System</h1>
         </header>
 
         <!-- Query Input Section -->
@@ -23,7 +22,7 @@
                     autocomplete="off"
                 >
                 <button id="submitBtn" onclick="submitQuery()">
-                    <span id="btnText">Ask Question</span>
+                    <span id="btnText">Send</span>
                     <span id="btnLoader" class="loader hidden"></span>
                 </button>
             </div>
@@ -33,14 +32,14 @@
         <div id="resultsSection" class="hidden">
             <!-- Answer Display -->
             <div class="answer-section">
-                <h2>💡 Answer</h2>
+                <h2>Answer</h2>
                 <div id="answerContent" class="answer-box"></div>
                 <div id="metadata" class="metadata"></div>
             </div>
 
             <!-- Retrieved Chunks Display -->
             <div class="chunks-section">
-                <h2>📄 All Retrieved Chunks</h2>
+                <h2>All Retrieved Chunks</h2>
                 <p class="section-description">
                     These are all chunks retrieved by vector similarity search, 
                     ranked by their re-ranking scores. 
@@ -51,7 +50,7 @@
 
             <!-- Selected Chunks for LLM -->
             <div class="selected-section">
-                <h2>✨ Chunks Sent to LLM</h2>
+                <h2>Chunks Sent to LLM</h2>
                 <p class="section-description">
                     Only these top-ranked chunks were used as context for generating the answer.
                 </p>
@@ -61,7 +60,7 @@
 
         <!-- Error Display -->
         <div id="errorSection" class="error-section hidden">
-            <h3>❌ Error</h3>
+            <h3>Error</h3>
             <p id="errorMessage"></p>
         </div>
     </div>

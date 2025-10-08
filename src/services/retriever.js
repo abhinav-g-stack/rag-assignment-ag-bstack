@@ -35,7 +35,7 @@ class Retriever {
         this.initialRetrievalCount
       ]);
 
-      console.log(`✓ Retrieved ${result.rows.length} chunks`);
+      console.log(`Retrieved ${result.rows.length} chunks`);
 
       const chunks = result.rows.map(row => ({
         id: row.id,

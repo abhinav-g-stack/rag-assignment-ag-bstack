@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
 // Start server
 app.listen(PORT, () => {
   console.log('\n' + '='.repeat(60));
-  console.log('🚀 RAG System Server Started');
+  console.log('RAG System Server Started');
   console.log('='.repeat(60));
   console.log(`Server running on: http://localhost:${PORT}`);
   console.log(`API endpoint: http://localhost:${PORT}/api/query`);

@@ -34,7 +34,7 @@ class Generator {
       const response = result.response;
       const answer = response.text();
       
-      console.log('✓ Answer generated successfully');
+      console.log('Answer generated successfully');
 
       // Get token usage if available
       const tokensUsed = response.usageMetadata ? 
