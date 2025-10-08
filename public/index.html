@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG System - Document Q&A</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 RAG Document Q&A System</h1>
+            <p class="subtitle">Ask questions about your document</p>
+        </header>
+
+        <!-- Query Input Section -->
+        <div class="query-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="questionInput" 
+                    placeholder="Enter your question here..."
+                    autocomplete="off"
+                >
+                <button id="submitBtn" onclick="submitQuery()">
+                    <span id="btnText">Ask Question</span>
+                    <span id="btnLoader" class="loader hidden"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden">
+            <!-- Answer Display -->
+            <div class="answer-section">
+                <h2>💡 Answer</h2>
+                <div id="answerContent" class="answer-box"></div>
+                <div id="metadata" class="metadata"></div>
+            </div>
+
+            <!-- Retrieved Chunks Display -->
+            <div class="chunks-section">
+                <h2>📄 All Retrieved Chunks</h2>
+                <p class="section-description">
+                    These are all chunks retrieved by vector similarity search, 
+                    ranked by their re-ranking scores. 
+                    <strong class="highlight-label">Highlighted chunks</strong> were sent to the LLM.
+                </p>
+                <div id="chunksContainer"></div>
+            </div>
+
+            <!-- Selected Chunks for LLM -->
+            <div class="selected-section">
+                <h2>✨ Chunks Sent to LLM</h2>
+                <p class="section-description">
+                    Only these top-ranked chunks were used as context for generating the answer.
+                </p>
+                <div id="selectedContainer"></div>
+            </div>
+        </div>
+
+        <!-- Error Display -->
+        <div id="errorSection" class="error-section hidden">
+            <h3>❌ Error</h3>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

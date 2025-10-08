@@ -1,0 +1,32 @@
+{
+  "name": "rag-assignment",
+  "version": "1.0.0",
+  "description": "RAG system with PGVector, Gemini, and Cohere",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "ingest": "node scripts/ingest.js"
+  },
+  "keywords": [
+    "rag",
+    "pgvector",
+    "gemini",
+    "cohere",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cohere-ai": "^7.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
